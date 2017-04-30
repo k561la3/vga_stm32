@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\stm_vga\cmsis -I..\..\..\workspace\stm_vga\cmsis_lib\include -I..\..\..\..\..\dev\__WORKSPACE__ -I..\..\..\workspace\stm_vga\cmsis_boot -I..\..\..\..\..\dev\__WORKSPACE__\vga_artekit -I..\..\..\workspace\stm_vga -I..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit -I..\..\..\workspace\stm_vga\cmsis_lib -I..\..\..\workspace">
+      <target file="stm32f4xx_exti.o" lastModified="15bbf607efd">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="15b9bee9edc"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="15bbf607caf">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15b9beb1c0c"/>
+      </target>
+      <target file="video.o" lastModified="15bbf6080b9">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\video.c" lastModified="14aae8f2b50"/>
+      </target>
+      <target file="stm32f4xx_syscfg.o" lastModified="15bbf6079e3">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="15b9beec4aa"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="15bbf607a24">
+         <source file="..\..\..\..\..\repo\Components\500_CMSIS BOOT\src\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="13fb35db3f0"/>
+      </target>
+      <target file="stm32f4xx_tim.o" lastModified="15bbf608008">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="15b9beb64f4"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="15bbf607cfd">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\system_stm32f4xx.c" lastModified="14aaf02c510"/>
+      </target>
+      <target file="stm32f4_discovery.o" lastModified="15bbf607a78">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\stm32f4_discovery.c" lastModified="15b9bef6952"/>
+      </target>
+      <target file="misc.o" lastModified="15bbf607f49">
+         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15b9beb8697"/>
+      </target>
+      <target file="mth.o" lastModified="15bbf608055">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\mth.c" lastModified="14aa12992c0"/>
+      </target>
+      <target file="stm32f4xx_dma.o" lastModified="15bbf607da8">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="15b9beb4772"/>
+      </target>
+      <target file="font5x7.o" lastModified="15bbf607ddc">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\font5x7.c" lastModified="13ba1f38f80"/>
+      </target>
+      <target file="demo.o" lastModified="15bbf607c2b">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\demo.c" lastModified="15bbf595c4d"/>
+      </target>
+      <target file="stm32f4xx_spi.o" lastModified="15bbf607e45">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="15b9beb346a"/>
+      </target>
+      <target file="stm32f4xx_rcc.o" lastModified="15bbf607bbf">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15b9beb1c62"/>
+      </target>
+      <target file="syscalls.o" lastModified="15bbf607d46">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="15b9bec190d"/>
+      </target>
+      <target file="gdi.o" lastModified="15bbf607eac">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\gdi.c" lastModified="14aa117a100"/>
+      </target>
+      <target file="sys.o" lastModified="15bbf607acd">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\sys.c" lastModified="14aae8f2b50"/>
+      </target>
+      <target file="main.o" lastModified="15bbf607b1f">
+         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\main.c" lastModified="15bbf60772e"/>
+      </target>
+   </processor>
+</history>

@@ -92,7 +92,7 @@ void gdiCopyRect(PGDI_RECT rc1, PGDI_RECT rc2) {
 //	From Cortex STM32F10x Reference Manual (RM0008):
 //	A mapping formula shows how to reference each word in the alias region to a 
 //	corresponding bit in the bit-band region. The mapping formula is:
-//	bit_word_addr = bit_band_base + (byte_offset x 32) + (bit_number × 4)
+//	bit_word_addr = bit_band_base + (byte_offset x 32) + (bit_number Ã— 4)
 //	where:
 //	bit_word_addr is the address of the word in the alias memory region that 
 //	maps to the targeted bit.
@@ -381,17 +381,33 @@ void	gdiRectangleEx(PGDI_RECT rc, u16 rop) {
 //
 //	return			none
 //*****************************************************************************
-void	gdiCircle(u16 x, u16 y, u16 r, u16 rop) {
-
-i32		x1, y1;
-u16		a;
-
-	for (a = 0; a < 360; a++) {		
-		x1 = r * mthCos(a);
-		y1 = r * mthSin(a);
-		gdiPoint(NULL, (x1 / 10000) + x,(y1 / 10000) + y,rop);
+void gdiCircle( u16 x0, u16 y0,u16 radius, u16 rop) {
+		int x = 0;
+		int y = radius;
+		int delta = 1 - 2 * radius;
+		int error = 0;
+		while(y >= 0) {
+			gdiPoint(NULL, x+x0, y+y0, rop);
+			gdiPoint(NULL, x+x0, y0-y, rop);
+			gdiPoint(NULL, x0-x, y+y0, rop);
+			gdiPoint(NULL, x0-x, y0-y, rop);
+			error = 2 * (delta + y) - 1;
+			if(delta < 0 && error <= 0) {
+				++x;
+				delta += 2 * x + 1;
+				continue;
+			}
+			error = 2 * (delta - x) - 1;
+			if(delta > 0 && error > 0) {
+				--y;
+				delta += 1 - 2 * y;
+				continue;
+			}
+			++x;
+			delta += 2 * (x - y);
+			--y;
+		}
 	}
-}
 
 //*****************************************************************************
 //	Function gdiDrawText(PGDI_RECT prc, pu8 ptext, u16 style, u16 rop)

@@ -1,5 +1,4 @@
-#STM32F4 output to VGA monitor 
-#(1 bit, green)
+#STM32F4 output to VGA monitor (1 bit color, green)
 This code is for stm32f4vg, and it does VGA output via SPI & DMA with timers. It's great that output made on peripherals only, so it has only little affect on the main program flow.
 Original code developed by Artekit team for stm32f103 & ported on f4 series by Karl Lunt
 Now I try to improve/optimize/prepare it to be useful in graphics output/etc

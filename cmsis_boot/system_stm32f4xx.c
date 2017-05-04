@@ -1,3 +1,7 @@
+// __BE_CAREFUL__! THIS system_stm32f4xx.c DIFFERS FROM ORIGINAL COOCOX SOURCE FILE!
+
+
+
 /**
 ******************************************************************************
 * @file system_stm32f4xx.c

@@ -446,6 +446,24 @@ void  DMA_STREAM_IRQHANDLER(void)
 	}
 }
 
+
+void vidClearRow(u16 y){
+
+	for(u16 x=0;x<102;x++){
+		fb[y][x]=0;
+	}
+}
+
+void vidClearColumn(u16 x){
+
+	for(u16 y=0;y<600;y++){
+		fb[y][x/8]&=(1<<(7-(x%8)));
+	}
+}
+
+
+
+
 void vidClearScreen(void)
 {
 	u16 x, y;
@@ -455,6 +473,20 @@ void vidClearScreen(void)
 		for (x = 0; x < VTOTAL; x++)
 		{
 			fb[y][x] = 0;
+		}
+	}
+}
+
+
+void vidSetScreen(void)
+{
+	u16 x, y;
+
+	for (y = 0; y < VID_VSIZE; y++)
+	{
+		for (x = 0; x < VTOTAL; x++)
+		{
+			fb[y][x] = 0xFF;
 		}
 	}
 }

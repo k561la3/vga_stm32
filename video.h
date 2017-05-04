@@ -40,6 +40,9 @@
 
 void	vidInit(void);
 void	vidClearScreen(void);
+void vidSetScreen(void);
+void vidClearColumn(u16 x);
+void vidClearRow(u16 y);
 
 
 

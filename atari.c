@@ -7,6 +7,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define GREEN			LED4_PIN
+#define ORANGE			LED3_PIN
+#define RED				LED5_PIN
+#define BLUE			LED6_PIN
+#define ALL_LEDS		(GREEN | ORANGE | RED | BLUE)		// all leds
+#define LEDS_GPIO_PORT (GPIOD)
+
+#define  LED_ON(x)        GPIO_SetBits(LEDS_GPIO_PORT, x)
+#define  LED_OFF(x)       GPIO_ResetBits(LEDS_GPIO_PORT, x)
+
+
+
+
 #define VTOTAL	(VID_HSIZE+2)
 extern u8	fb[VID_VSIZE][VTOTAL]  __attribute__((aligned(32)));
 extern void vidClearColumn(uint16_t x);
@@ -47,18 +60,7 @@ const u8 block[] = {0xFF,0xFF,0xFF,0xFF,0,
 					0xFF,0xFF,0xFF,0xFF,0,
 					0xFF,0xFF,0xFF,0xFF,0,
 					0xFF,0xFF,0xFF,0xFF,0};
-const u8 _block[] = {0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,
-		0,0,0,0,0,};
+
 const u8 clrball[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 #define LEFT_BTN GPIO_Pin_0
@@ -103,28 +105,33 @@ while(LOSER){
 		}
 	}
 
-if((--BLX<=0)||(++BLX>=784)){
+if((--BLX<=8)){
 BALLSPEEDX=(-BALLSPEEDX);
+LED_ON(ORANGE);
 }
-if(--BLY<=2){
+if((++BLX>=784)){
+BALLSPEEDX=(-BALLSPEEDX);
+LED_ON(RED);
+}
+if(--BLY<=1){
 BALLSPEEDY=(-BALLSPEEDY);
+LED_ON(BLUE);
 }
-char debug_buf[32];
-sprintf(debug_buf,"DIGIT = %d",fb[--BLY][(BLX+8)/8]);
-gdiDrawTextEx(500, 300, (pu8)debug_buf, GDI_ROP_COPY);
-
-if((u8)(fb[BLY-1][(BLX+8)/8])==(u8)255){BALLSPEEDY=(-BALLSPEEDY);
-gdiBitBlt(NULL,(BLX/40)*5,(BLY/15)*15,40,12, (pu8)_block,GDI_ROP_COPY);
-
-}
-
+//char debug_buf[32];
+//sprintf(debug_buf,"DIGIT = %d",fb[--BLY][(BLX+8)/8]);
+//gdiDrawTextEx(500, 300, (pu8)debug_buf, GDI_ROP_COPY);
 BLX+=BALLSPEEDX;
 BLY+=BALLSPEEDY;
+if((u8)(fb[BLY-1][(BLX+8)/8])==(u8)255){BALLSPEEDY=(-BALLSPEEDY);
+gdiBitBlt(NULL,(BLX/40)*40,(BLY/15)*15,40,12, (pu8)block,GDI_ROP_XOR);
+LED_ON(GREEN);
+}
+
+
 gdiBitBlt(NULL,BLX,BLY,16,16,(pu8) ataball,GDI_ROP_COPY);
-sysDelayMs(100);
+sysDelayMs(20);
 }
 gdiDrawTextEx(500, 300, (pu8)"U R LOSER SUCK", GDI_ROP_COPY);
 while(1){}
 
 }
-

@@ -457,7 +457,7 @@ void vidClearRow(u16 y){
 void vidClearColumn(u16 x){
 
 	for(u16 y=0;y<600;y++){
-		fb[y][x/8]&=(1<<(7-(x%8)));
+		fb[y][x/8]&=~(1<<(7-(x%8)));
 	}
 }
 

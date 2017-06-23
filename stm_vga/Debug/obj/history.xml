@@ -1,62 +1,71 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\stm_vga\cmsis -I..\..\..\workspace\stm_vga\cmsis_lib\include -I..\..\..\..\..\dev\__WORKSPACE__ -I..\..\..\workspace\stm_vga\cmsis_boot -I..\..\..\..\..\dev\__WORKSPACE__\vga_artekit -I..\..\..\workspace\stm_vga -I..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit -I..\..\..\workspace\stm_vga\cmsis_lib -I..\..\..\workspace">
-      <target file="stm32f4xx_exti.o" lastModified="15bbf607efd">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="15b9bee9edc"/>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F407VG -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\..\dev -I..\..\..\..\..\dev\__STM__\vga_stm32\cmsis_lib -I..\..\..\..\..\dev\__STM__\vga_stm32\cmsis -I..\..\..\..\..\dev\__STM__\vga_stm32\cmsis_boot -I..\..\..\..\..\dev\__STM__\vga_stm32\cmsis_lib\include -I..\..\..\..\..\dev\__STM__ -I..\..\..\..\..\dev\__STM__\vga_stm32">
+      <target file="stm32f4xx_exti.o" lastModified="15cd6a6ca1f">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_exti.c" lastModified="15cd03d1379"/>
       </target>
-      <target file="stm32f4xx_gpio.o" lastModified="15bbf607caf">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15b9beb1c0c"/>
+      <target file="stm32f4xx_gpio.o" lastModified="15cd6a6c717">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_gpio.c" lastModified="15cd03d1379"/>
       </target>
-      <target file="video.o" lastModified="15bbf6080b9">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\video.c" lastModified="14aae8f2b50"/>
+      <target file="video.o" lastModified="15cd6a6cbf5">
+         <source file="..\..\..\video.c" lastModified="15cd03d1449"/>
       </target>
-      <target file="stm32f4xx_syscfg.o" lastModified="15bbf6079e3">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="15b9beec4aa"/>
+      <target file="atari.o" lastModified="15cd6a6ca86">
+         <source file="..\..\..\atari.c" lastModified="15cd0845648"/>
       </target>
-      <target file="startup_stm32f4xx.o" lastModified="15bbf607a24">
-         <source file="..\..\..\..\..\repo\Components\500_CMSIS BOOT\src\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="13fb35db3f0"/>
+      <target file="stm32f4xx_syscfg.o" lastModified="15cd6a6c2b4">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_syscfg.c" lastModified="15cd03d1393"/>
       </target>
-      <target file="stm32f4xx_tim.o" lastModified="15bbf608008">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="15b9beb64f4"/>
+      <target file="startup_stm32f4xx.o" lastModified="15cd6a6c445">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f4xx.c" lastModified="15cd03d1297"/>
       </target>
-      <target file="system_stm32f4xx.o" lastModified="15bbf607cfd">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\system_stm32f4xx.c" lastModified="14aaf02c510"/>
+      <target file="stm32f4xx_tim.o" lastModified="15cd6a6cb91">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_tim.c" lastModified="15cd03d1394"/>
       </target>
-      <target file="stm32f4_discovery.o" lastModified="15bbf607a78">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\stm32f4_discovery.c" lastModified="15b9bef6952"/>
+      <target file="system_stm32f4xx.o" lastModified="15cd6a6c765">
+         <source file="..\..\..\cmsis_boot\system_stm32f4xx.c" lastModified="15cd03d129a"/>
       </target>
-      <target file="misc.o" lastModified="15bbf607f49">
-         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15b9beb8697"/>
+      <target file="tennis.o" lastModified="15cd6aae00e">
+         <source file="..\..\..\tennis.c" lastModified="15cd6aad1fa"/>
       </target>
-      <target file="mth.o" lastModified="15bbf608055">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\mth.c" lastModified="14aa12992c0"/>
+      <target file="stm32f4_discovery.o" lastModified="15cd6a6c4a0">
+         <source file="..\..\..\stm32f4_discovery.c" lastModified="15cd03d1399"/>
       </target>
-      <target file="stm32f4xx_dma.o" lastModified="15bbf607da8">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="15b9beb4772"/>
+      <target file="misc.o" lastModified="15cd6a6cad3">
+         <source file="..\..\..\cmsis_lib\source\misc.c" lastModified="15cd03d1376"/>
       </target>
-      <target file="font5x7.o" lastModified="15bbf607ddc">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\font5x7.c" lastModified="13ba1f38f80"/>
+      <target file="stm32f4xx_dma.o" lastModified="15cd6a6c812">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_dma.c" lastModified="15cd03d1378"/>
       </target>
-      <target file="demo.o" lastModified="15bbf607c2b">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\demo.c" lastModified="15bbf595c4d"/>
+      <target file="deskchan.o" lastModified="15cd6a6c401">
+         <source file="..\..\..\deskchan.c" lastModified="15cd0fea691"/>
       </target>
-      <target file="stm32f4xx_spi.o" lastModified="15bbf607e45">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="15b9beb346a"/>
+      <target file="font5x7.o" lastModified="15cd6a6c846">
+         <source file="..\..\..\font5x7.c" lastModified="15cd072f0a8"/>
       </target>
-      <target file="stm32f4xx_rcc.o" lastModified="15bbf607bbf">
-         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15b9beb1c62"/>
+      <target file="demo.o" lastModified="15cd6a6c6bc">
+         <source file="..\..\..\demo.c" lastModified="15cd0537cd0"/>
       </target>
-      <target file="syscalls.o" lastModified="15bbf607d46">
-         <source file="..\..\..\syscalls\syscalls.c" lastModified="15b9bec190d"/>
+      <target file="stm32f4xx_spi.o" lastModified="15cd6a6c938">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_spi.c" lastModified="15cd03d137c"/>
       </target>
-      <target file="gdi.o" lastModified="15bbf607eac">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\gdi.c" lastModified="14aa117a100"/>
+      <target file="tyan-image.o" lastModified="15cd6a6c8cf">
+         <source file="..\..\..\tyan-image.c" lastModified="15cd0fda5be"/>
       </target>
-      <target file="sys.o" lastModified="15bbf607acd">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\sys.c" lastModified="14aae8f2b50"/>
+      <target file="stm32f4xx_rcc.o" lastModified="15cd6a6c658">
+         <source file="..\..\..\cmsis_lib\source\stm32f4xx_rcc.c" lastModified="15cd03d137b"/>
       </target>
-      <target file="main.o" lastModified="15bbf607b1f">
-         <source file="..\..\..\..\..\..\..\dev\__WORKSPACE__\vga_artekit\vga_artekit\main.c" lastModified="15bbf60772e"/>
+      <target file="syscalls.o" lastModified="15cd6a6c7b0">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="15cd03d1448"/>
+      </target>
+      <target file="gdi.o" lastModified="15cd6a6c9a2">
+         <source file="..\..\..\gdi.c" lastModified="15cd03d1396"/>
+      </target>
+      <target file="sys.o" lastModified="15cd6a6c575">
+         <source file="..\..\..\sys.c" lastModified="15cd078a2d8"/>
+      </target>
+      <target file="main.o" lastModified="15cd6a6c5d5">
+         <source file="..\..\..\main.c" lastModified="15cd6a01c6d"/>
       </target>
    </processor>
 </history>

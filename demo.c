@@ -38,8 +38,10 @@
 #include "sys.h"
 #include "video.h"
 #include "gdi.h"
-#include "string.h"
-#include <stdlib.h>
+
+#ifndef  NULL
+#define  NULL  0
+#endif
 
 // extern volatile u32		sysTicks;
 

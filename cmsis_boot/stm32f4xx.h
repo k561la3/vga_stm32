@@ -137,6 +137,7 @@
  * @brief STM32F4XX Interrupt Number Definition, according to the selected device 
  *        in @ref Library_configuration_section 
  */
+ ;
 typedef enum IRQn
 {
 /******  Cortex-M4 Processor Exceptions Numbers ****************************************************************/

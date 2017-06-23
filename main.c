@@ -42,14 +42,16 @@
 #include "sys.h"
 #include "video.h"
 #include "gdi.h"
-#define HSE_VALUE (uint32_t)8000000
+
 
 
 /*
  *  Define a structure for inializing the LED port lines.
  */
 
-extern void demoInit(void);
+extern void playAtari(void);
+extern void deskchan(void);
+extern void playTennis(void);
 
 void RCC_Configuration(void)
 {
@@ -81,7 +83,9 @@ int main(void)
 	vidInit();
 //	sysInitSystemTimer();
 	
-	demoInit();
-	
+	//playAtari();
+	GPIO_ResetBits(GPIOD,GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15);
+	//deskchan();
+	playTennis();
 	return 0;
 }

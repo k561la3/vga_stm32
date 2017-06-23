@@ -11,7 +11,7 @@
 #define ORANGE			LED3_PIN
 #define RED				LED5_PIN
 #define BLUE			LED6_PIN
-#define ALL_LEDS		(GREEN | ORANGE | RED | BLUE)		// all leds
+#define ALL_LEDS		(GREEN | ORANGE | RED | BLUE)		//////////// all //////leds////
 #define LEDS_GPIO_PORT (GPIOD)
 
 #define  LED_ON(x)        GPIO_SetBits(LEDS_GPIO_PORT, x)

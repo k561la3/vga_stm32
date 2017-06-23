@@ -1,26 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=stm_vga.map -O0 --gc-sections -LD:\CooCox\CoIDE\configuration\ProgramData\stm_vga -TD:\CooCox\CoIDE\configuration\ProgramData\stm_vga/arm-gcc-link.ld -g">
-      <target file="stm_vga.elf" lastModified="15bbf60832f">
-         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="15bbf6079e3"/>
-         <source file="..\obj\startup_stm32f4xx.o" lastModified="15bbf607a24"/>
-         <source file="..\obj\stm32f4_discovery.o" lastModified="15bbf607a78"/>
-         <source file="..\obj\sys.o" lastModified="15bbf607acd"/>
-         <source file="..\obj\main.o" lastModified="15bbf607b1f"/>
-         <source file="..\obj\stm32f4xx_rcc.o" lastModified="15bbf607bbf"/>
-         <source file="..\obj\demo.o" lastModified="15bbf607c2b"/>
-         <source file="..\obj\stm32f4xx_gpio.o" lastModified="15bbf607caf"/>
-         <source file="..\obj\system_stm32f4xx.o" lastModified="15bbf607cfd"/>
-         <source file="..\obj\syscalls.o" lastModified="15bbf607d46"/>
-         <source file="..\obj\stm32f4xx_dma.o" lastModified="15bbf607da8"/>
-         <source file="..\obj\font5x7.o" lastModified="15bbf607ddc"/>
-         <source file="..\obj\stm32f4xx_spi.o" lastModified="15bbf607e45"/>
-         <source file="..\obj\gdi.o" lastModified="15bbf607eac"/>
-         <source file="..\obj\stm32f4xx_exti.o" lastModified="15bbf607efd"/>
-         <source file="..\obj\misc.o" lastModified="15bbf607f49"/>
-         <source file="..\obj\stm32f4xx_tim.o" lastModified="15bbf608008"/>
-         <source file="..\obj\mth.o" lastModified="15bbf608055"/>
-         <source file="..\obj\video.o" lastModified="15bbf6080b9"/>
+   <processor signature="5.4.1 -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=stm_vga.map -O0 --gc-sections -LE:\CooCox\CoIDE\configuration\ProgramData\stm_vga -TE:\CooCox\CoIDE\configuration\ProgramData\stm_vga/arm-gcc-link.ld -g">
+      <target file="stm_vga.elf" lastModified="15cd6aae264">
+         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="15cd6a6c2b4"/>
+         <source file="..\obj\tennis.o" lastModified="15cd6aae00e"/>
+         <source file="..\obj\deskchan.o" lastModified="15cd6a6c401"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="15cd6a6c445"/>
+         <source file="..\obj\stm32f4_discovery.o" lastModified="15cd6a6c4a0"/>
+         <source file="..\obj\sys.o" lastModified="15cd6a6c575"/>
+         <source file="..\obj\main.o" lastModified="15cd6a6c5d5"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="15cd6a6c658"/>
+         <source file="..\obj\demo.o" lastModified="15cd6a6c6bc"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="15cd6a6c717"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="15cd6a6c765"/>
+         <source file="..\obj\syscalls.o" lastModified="15cd6a6c7b0"/>
+         <source file="..\obj\stm32f4xx_dma.o" lastModified="15cd6a6c812"/>
+         <source file="..\obj\font5x7.o" lastModified="15cd6a6c846"/>
+         <source file="..\obj\tyan-image.o" lastModified="15cd6a6c8cf"/>
+         <source file="..\obj\stm32f4xx_spi.o" lastModified="15cd6a6c938"/>
+         <source file="..\obj\gdi.o" lastModified="15cd6a6c9a2"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="15cd6a6ca1f"/>
+         <source file="..\obj\atari.o" lastModified="15cd6a6ca86"/>
+         <source file="..\obj\misc.o" lastModified="15cd6a6cad3"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="15cd6a6cb91"/>
+         <source file="..\obj\video.o" lastModified="15cd6a6cbf5"/>
       </target>
    </processor>
 </history>

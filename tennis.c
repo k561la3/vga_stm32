@@ -29,20 +29,14 @@ const u8 ball[] = { 0x01, 0x80,
 
 
 
-const u8 linem[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-
-};
 
 
-const u8 dummy[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
+
+//const u8 dummy[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
 #define LEFT 1
 #define RIGHT 2
 #define NOBODY 0
-#define LEFT_UP_BTN GPIO_Pin_2
+#define LEFT_UP_BTN GPIO_Pin_0
 #define LEFT_DN_BTN GPIO_Pin_6
 void playTennis(void){
 int16_t YR=275,YL=275,BOARD_LEN = 50, BALLX=400,BALLY=300, VELX=2,VELY=1, BOARD_VEL=2;
@@ -60,9 +54,9 @@ GPIO_Init( GPIOD , &PORT_SETUP); //записать настройки
 
 while(1){
 
-	gdiBitBlt(NULL,BALLX,BALLY,16,16,(pu8) dummy,GDI_ROP_COPY);
-	vidClearColumn(0);
-	vidClearColumn(VID_PIXELS_X-8);
+	gdiBitBlt(NULL,BALLX,BALLY,16,16,(pu8) ball,GDI_ROP_XOR);
+	vidClearColumn(2);
+	vidClearColumn(VID_PIXELS_X-2);
 
 if(--BALLY<=0){
 VELY=(-VELY);
@@ -71,14 +65,14 @@ if(++BALLY+16>=VID_PIXELS_Y){
 VELY=-(VELY);
 }
 if(--BALLX<=2){
-if(BALLY>YL && (BALLY+16)<(YL+50)){
+if(BALLY+8>YL && (BALLY+8)<(YL+50)){
 VELX=(-VELX);
 }else{
 PLAYERWINS=RIGHT;
 }
 }
 if(++BALLX+16>=VID_PIXELS_X-2){
-if(BALLY>YR && (BALLY+16)<(YR+50)){
+if(BALLY+8>YR && (BALLY+8)<(YR+50)){
 VELX=(-VELX);
 }else{
 PLAYERWINS=LEFT;

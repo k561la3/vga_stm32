@@ -5,6 +5,7 @@ Now I try to improve/optimize/prepare it to be useful in graphics output/etc
 Output:
 
 VGA pin | STM32F4 pin  |  Channel                 | Comment
+-------------------------------------------------------
    2    |   PB5        |  Pixel Data GREEN        | Can be changed into VGA Pin 1 (RED) or 3 (BLUE). MUST be connected with 
         |              |                          | resistor divider (270 Ohm to GND, 120 Ohm to PB5)
         |              |                          | Plan to introduce R2R with regulated colors (Probably with FPGA)
